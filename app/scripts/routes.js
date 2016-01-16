@@ -66,10 +66,17 @@ angular.module('angFireApp')
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'
       })
+
+      .when('/donate', {
+        templateUrl: 'views/donate.html',
+        controller: 'DonateCtrl'
+      })
+
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      
       .whenAuthenticated('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'

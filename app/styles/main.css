@@ -59,6 +59,15 @@ body {
   margin-top: 28px;
 }
 
+.logo {
+  height: 100px;
+}
+
+.logo-trans {
+  height: 45px;
+  padding: 5px 15px 5px 0px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
