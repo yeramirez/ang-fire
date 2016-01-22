@@ -62,21 +62,26 @@ angular.module('angFireApp')
         controller: 'MainCtrl'
       })
 
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'ChatCtrl'
-      })
-
       .when('/donate', {
         templateUrl: 'views/donate.html',
         controller: 'DonateCtrl'
+      })
+
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
 
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
-      
+
+      .when('/list', {
+        templateUrl: 'views/list.html',
+        controller: 'ListCtrl'
+      })
+
       .whenAuthenticated('/account', {
         templateUrl: 'views/account.html',
         controller: 'AccountCtrl'

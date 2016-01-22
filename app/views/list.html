@@ -1,0 +1,25 @@
+<div class='container my-own-container'>
+  <img src="../images/hand-holding.jpg" alt="Hand holding gift" />
+  <h2>Create Your Own Bundle</h2>
+</div>
+<div class="container">
+  <h3>Step One:</h2>
+  <p>
+    In this step, we are going to ask you to please enter the names of items that you'd like to donate and add them to your list. Your list will add the total of the items to let you know how much you will be charged.
+  </p>
+  <p>
+    <form>
+      <div class="form-group">
+        <label for="item">Item</label>
+        <input type="text" class="form-control" id="item" placeholder="Item Name">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </p>
+  <ul>
+    <li ng-repeat="item in list">
+      <span>{{item.name}}</span>
+      <p>{{item.price}}</p>
+    </li>
+  </ul>
+</div>

@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  font-family: 'Roboto+Light', sans-serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -15,6 +16,65 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+h1, h2 {
+  font-family: 'Moon-Bold', sans-serif;
+}
+
+h3, h4 {
+  font-family: 'Moon', sans-serif;
+}
+
+li > a, .navbar-header > a {
+  color: #222222;
+  font-family: 'Moon';
+}
+
+.my-own-container > img {
+  height: 300px;
+}
+
+.my-own-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+}
+
+.video {
+  width: 100%;
+}
+
+.btn {
+  background-color: #FF7F00;
+  border-color: ##FF7F00;
+  width: 130px;
+  color: #f9f9f9;
+  border-radius: 70px;
+}
+
+.btn:hover {
+  border-color: #FF7F00;
+  background-color: #FFFFFF;
+  color: #FF7F00;
+}
+
+div.caption > br + p {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.footer {
+  padding: 20px auto;
+}
+
+.form-group > #email {
+  width: 200px;
 }
 
 /* Custom page header */
@@ -65,7 +125,7 @@ body {
 
 .logo-trans {
   height: 45px;
-  padding: 5px 15px 5px 0px;
+  padding: 10px 15px 5px 0px;
 }
 
 /* Responsive: Portrait tablets and up */
