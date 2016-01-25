@@ -9,8 +9,6 @@
 
 angular.module('angFireApp')
   .controller('ListCtrl', function (Firebase, $scope, Auth, $firebaseArray, $location) {
-    var items;
-    var userItems;
 
     Auth.$onAuth(function(authData) {
       if (authData) {

@@ -18,8 +18,7 @@ angular.module('angFireApp')
       Auth.$authWithOAuthPopup(provider, {rememberMe: true}).then(redirect, showError);
     };
 
-    function redirect(authData) {
-      console.log('CURRENT USER: ', $rootScope.currentUser);
+    function redirect() {
       $location.path('/account');
     }
 
