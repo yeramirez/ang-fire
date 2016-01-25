@@ -26,9 +26,12 @@
   </p>
   <p>
     <ul>
-      <li ng-repeat="items in userItems">
-        <span>{{ items.name }}</span>
-        <span>${{ items.price }}</span>
+      <li ng-repeat="item in userItems">
+        <span>{{ item.name }}</span>
+        <span>${{ item.price }}</span>
+        <button type="submit" ng-click="removeItem(item)" class="btn btn-danger">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
       </li>
     </ul>
   </p>

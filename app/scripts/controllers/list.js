@@ -29,12 +29,10 @@ angular.module('angFireApp')
           });
         };
 
-        $scope.removeItem = function () {
-          userItems.$remove($scope.item).then(function(ref) {
-            // data has been deleted locally and in the database
-            console.log($scope.item);
-          }, function(error) {
-            console.log('Error:', error);
+        $scope.removeItem = function (item) {
+          //var userItems = $firebaseArray(ref);
+          $scope.userItems.$remove(item).then(function(ref) {
+            ref.key() === item.$id; // true
           });
         };
 

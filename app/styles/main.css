@@ -31,8 +31,9 @@ li > a, .navbar-header > a {
   font-family: 'Moon';
 }
 
-ul {
-  text-decoration: none;
+ul
+{
+    list-style-type: none;
 }
 
 .my-own-container > img {
