@@ -30,7 +30,6 @@ angular.module('angFireApp')
         };
 
         $scope.removeItem = function (item) {
-          //var userItems = $firebaseArray(ref);
           $scope.userItems.$remove(item).then(function(ref) {
             ref.key() === item.$id; // true
           });
