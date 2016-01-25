@@ -3,3 +3,8 @@ dist
 .tmp
 .sass-cache
 bower_components
+.yo-rc.json
+.gitattributes
+.editorconfig
+.bowerrc
+.jshintrc
