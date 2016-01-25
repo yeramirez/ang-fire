@@ -25,10 +25,12 @@
     </form>
   </p>
   <p>
-    <span ng-repeat="items in userItems"></span>
-  </p>
-  <p>
-    This is the end
+    <ul>
+      <li ng-repeat="items in userItems">
+        <span>{{ items.name }}</span>
+        <span>${{ items.price }}</span>
+      </li>
+    </ul>
   </p>
   </div>
 </div>
