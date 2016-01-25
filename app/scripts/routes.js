@@ -58,13 +58,11 @@ angular.module('angFireApp')
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/main.html'
       })
 
       .when('/donate', {
-        templateUrl: 'views/donate.html',
-        controller: 'DonateCtrl'
+        templateUrl: 'views/donate.html'
       })
 
       .when('/about', {

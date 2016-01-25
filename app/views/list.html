@@ -9,17 +9,26 @@
   </p>
   <p>
     <form>
-      <div class="form-group">
-        <label for="item">Item</label>
-        <input type="text" class="form-control" id="item" placeholder="Item Name">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <ul>
+        <li ng-repeat="item in items" class="checkbox">
+          <label>
+            <span>{{ item.name }}</span>
+            <span>${{ item.price }}</span>
+            <button type="submit" ng-click="addItem(item)" class="btn btn-default">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+            <br>
+            <br>
+          </label>
+        </li>
+      </ul>
     </form>
   </p>
-  <ul>
-    <li ng-repeat="item in list">
-      <span>{{item.name}}</span>
-      <p>{{item.price}}</p>
-    </li>
-  </ul>
+  <p>
+    <span ng-repeat="items in userItems"></span>
+  </p>
+  <p>
+    This is the end
+  </p>
+  </div>
 </div>

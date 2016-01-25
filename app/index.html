@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="angFireApp">
-    <div>
+    <div ng-controller='LoginCtrl'>
       <div class="navbar" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -27,13 +27,14 @@
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/donate">Donate</a></li>
               <li><a ng-href="#/about1">Our Mission</a></li>
-              <li><a href="#/login">Log In</a></li>
+              <li ng-hide-auth=""><a href="#/login">Log In</a></li>
+              <li><a ng-show-auth="" href="#/account">Account</a></li>
               <li>
-                <a ng-show-auth="" href="#/home">Logout</a>
+                <a ng-show-auth="" ng-click="logout()">Logout</a>
                 <span ng-show-auth="">
-                  {{ authData.name }} | <a href="#/home" ng-click="authObj.$unauth()">Logout</a>
-                </span>
-              </li>
+                  {{ authData.name }}
+                </span><li>
+
             </ul>
           </div>
         </div>
@@ -49,7 +50,7 @@
             <label for="email">Sign up for our newsletters!</label>
             <input type="email" class="form-control" id="email" placeholder="Email Address">
           </div>
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" class="button btn">Sign Up!</button>
         </form>
       </div>
     </div>
@@ -85,14 +86,13 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
     <script src="scripts/angularfire/config.js"></script>
     <script src="scripts/angularfire/firebase.ref.js"></script>
-    <script src="scripts/controllers/chat.js"></script>
     <script src="scripts/filters/reverse.js"></script>
     <script src="scripts/angularfire/auth.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/account.js"></script>
+    <script src="scripts/controllers/list.js"></script>
     <script src="scripts/directives/ngShowAuth.js"></script>
     <script src="scripts/directives/ngHideAuth.js"></script>
     <script src="scripts/routes.js"></script>

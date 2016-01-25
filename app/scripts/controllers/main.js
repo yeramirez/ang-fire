@@ -8,7 +8,7 @@
  * Controller of the angFireApp
  */
 angular.module('angFireApp')
-  .controller('MainCtrl', function ($scope, $rootScope, $firebaseArray) {
+  .controller('MainCtrl', function (Firebase, $scope, $rootScope, Auth, $firebaseArray) {
     var URL = 'https://o-cares.firebaseio.com/';
     var list = $firebaseArray(new Firebase(URL));
     var ref = new Firebase(URL);
@@ -31,7 +31,5 @@ angular.module('angFireApp')
       });
     };
 
-    $scope.logout = function () {
-      ref.$unauth();
-    };
+    $scope.logout = function() { Auth.$unauth(); };
   });

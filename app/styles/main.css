@@ -31,6 +31,10 @@ li > a, .navbar-header > a {
   font-family: 'Moon';
 }
 
+li {
+  text-decoration: none;
+}
+
 .my-own-container > img {
   height: 300px;
 }
@@ -43,19 +47,27 @@ li > a, .navbar-header > a {
   text-align: center;
 }
 
+#googleImage {
+  height: 200px;
+}
+
+.navbar-nav>li>a {
+  padding: 15px, 2px;
+}
+
 .video {
   width: 100%;
 }
 
-.btn {
+.button {
   background-color: #FF7F00;
-  border-color: ##FF7F00;
+  border-color: #f9f9f9;
   width: 130px;
   color: #f9f9f9;
   border-radius: 70px;
 }
 
-.btn:hover {
+.button:hover {
   border-color: #FF7F00;
   background-color: #FFFFFF;
   color: #FF7F00;

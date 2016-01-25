@@ -1,0 +1,40 @@
+{
+  "items": {
+    "item1": {
+      "name" : "Sock",
+      "price" : 3.00
+    },
+    "item2" : {
+      "name" : "Sweater",
+      "price" : 9.50
+    },
+    "item3" : {
+      "name" : "Hat",
+      "price" : 3.25
+    },
+    "item4" : {
+      "name" : "Shirt",
+      "price" : 10.99
+    },
+    "item5" : {
+      "name" : "Jeans",
+      "price" : 15.99
+    },
+    "item6" : {
+      "name" : "Jacket",
+      "price" : 20.45
+    },
+    "item7" : {
+      "name" : "Shoes",
+      "price" : 15.00
+    },
+    "item8" : {
+      "name" : "Toiletries",
+      "price" : 6.99
+    },
+    "item9" : {
+      "name" : "Undergarments",
+      "price" : 2.50
+    }
+  }
+}
