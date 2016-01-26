@@ -18,14 +18,6 @@ angular.module('angFireApp')
         $scope.userItems = $firebaseArray(ref);
         $scope.items = $firebaseArray(ref2);
 
-        // $scope.items.$loaded(
-        // function(x) {
-        //   x === $scope.items; // true
-        //   console.log('DATA TWO: ', $scope.items[0].name);
-        // }, function(error) {
-        //   console.error('Error:', error);
-        // });
-
         $scope.addItem = function (item) {
           var userItems = $firebaseArray(ref);
           console.log('DATA IN ', item);
@@ -33,15 +25,19 @@ angular.module('angFireApp')
           userItems.$loaded(
           function(x) {
             x === userItems; // true
-            console.log('firebase data ', userItems.length);
 
             var matched = false;
+            var index;
             angular.forEach(userItems, function (value, key) {
-              console.log('looping on', value);
               if(value.name === item.name) {
-                console.log('matches', item.name);
-                console.log('TRUE');
                 matched = true;
+
+                var newPrice = item.price + value.price;
+                index = key;
+
+                userItems[index].price = newPrice;
+                userItems.$save(index);
+
               }
             });
 
