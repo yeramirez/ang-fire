@@ -14,7 +14,7 @@
           <label>
             <span>{{ item.name }}</span>
             <span>${{ item.price }}</span>
-            <button type="submit" ng-click="addItem(item)" class="btn btn-default">
+            <button type="submit" ng-click="addItem(item, $index)" class="btn btn-default">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
             <br>
